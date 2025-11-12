@@ -2,6 +2,19 @@
 
 An alternative installation method for the backplane-operator using helm charts on non-OpenShift Kubernetes platforms.
 
+_Red Hat does not provide commercial support for the content of this repo.
+Any assistance is purely on a best-effort basis, as resources permit._
+
+```
+#############################################################################
+DISCLAIMER: THE CONTENT OF THIS REPO IS EXPERIMENTAL AND PROVIDED **"AS-IS"**
+
+THE CONTENT IS PROVIDED AS REFERENCE WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+#############################################################################
+```
+
 ## Prerequisites
 
 - cert-manager
@@ -10,7 +23,7 @@ An alternative installation method for the backplane-operator using helm charts 
 
 ## Installation
 
-helm install charts/multicluster-engine multicluster-engine -n multicluster-engine
+helm install multicluster-engine charts/multicluster-engine -n multicluster-engine
 
 ## License
 
