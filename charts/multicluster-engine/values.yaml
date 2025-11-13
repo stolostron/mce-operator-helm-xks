@@ -26,9 +26,8 @@ operand_images:
   assisted_service_8: "quay.io/stolostron/assisted-service-el8@sha256:8a817c1d79fa6afd88c82ad0c7ef82501dc8080cbca85452e405a38913d7628d"
   assisted_service_9: "quay.io/stolostron/assisted-service@sha256:c45eea08d53967de089567dac526ad694f424b50bee4ceb107a306953c050a55"
   aws_encryption_provider: "quay.io/stolostron/aws-encryption-provider@sha256:83f11e28004fcbb31d7ec6c34ef2d2ec7dd8fc175c5e0135f6ace9894c65bfd0"
-  backplane_must_gather: "quay.io/stolostron/backplane-must-gather@sha256:4b7fc3b3e8d9e91e76863074e523a1b15a0be50c08d56babd0a2c944101203d1"
   backplane_must_gather: "quay.io/stolostron/backplane-must-gather@sha256:72c5ae6e669a1b90699644e1cd5283bbaffe8372cc83fdfb0c646a93aaaae1ab"
-  backplane_operator: "quay.io/stolostron/backplane-operator@sha256:609d10b16169b2e073c27d1aafbc52ffdccead09334f17e8de9946477fea30b3"
+  backplane_operator: "quay.io/stolostron/backplane-operator@sha256:c7567d9d0da279f6616b95ce9d130dfcdae073c04c598f2f3e112f73dae8b820"
   backplane_operator_test: "quay.io/stolostron/backplane-operator-test@sha256:fd0a645124a8ca6588df9b0d588316aa232a5d02902823127ebf7f278c870043"
   cluster_api_provider_agent: "quay.io/stolostron/cluster-api-provider-agent@sha256:e2b52112f6ae5f16b8349cb80b244c739e5ac1bd41872d08379698a04c78a0d8"
   cluster_api_provider_aws: "quay.io/stolostron/cluster-api-aws-controller@sha256:22a57cf5b74d0692025f0b0f57c5f28f8b492ea13295e9101b63f57766ffff38"
@@ -70,6 +69,6 @@ operand_images:
   registration_operator: "quay.io/stolostron/registration-operator@sha256:c97d1d29844dc0aac68de600a19c6c9006cbabea64b9a3f06218d3f07573eb13"
   registration: "quay.io/stolostron/registration@sha256:d1ae6c40d32a504c2405258a2b2b47bf82a60c63c7995c7d5710ed01ab23c82f"
   work: "quay.io/stolostron/work@sha256:8be6b402cdad32c05669bed7ee5cd3f3a17edbfb94770e7b6a0a46c625d521ec"
-operator_image: "quay.io/stolostron/backplane-operator@sha256:609d10b16169b2e073c27d1aafbc52ffdccead09334f17e8de9946477fea30b3"
+operator_image: "quay.io/stolostron/backplane-operator@sha256:c7567d9d0da279f6616b95ce9d130dfcdae073c04c598f2f3e112f73dae8b820"
 operator_version: 2.10.0
 pull_secret: "e30K"
