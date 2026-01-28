@@ -1,0 +1,9 @@
+{
+"registry_overrides": {
+  "registry.redhat.io/multicluster-engine": "quay.io:443/acm-d",
+  "registry.redhat.io/openshift4": "quay.io:443/acm-d",
+  "registry.stage.redhat.io/openshift4": "quay.io:443/acm-d"
+  },
+"image_overrides": {
+  }
+}
