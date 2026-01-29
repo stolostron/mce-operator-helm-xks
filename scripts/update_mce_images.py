@@ -9,12 +9,12 @@ Extract images from an MCE image manifest and update MCE Helm chart values
 
 options:
   -h, --help            show this help message and exit
-  -f, --file FILE       MCE image manifest file
-  -u, --url URL         MCE image manifest URL
+  -f, --file FILE       Path to MCE image manifest JSON file
+  -u, --url URL         URL to MCE image manifest JSON
   -m, --mce-version MCE_VERSION
                         MCE operator version
   -o, --overrides OVERRIDES
-                        Overrides config file
+                        Path to overrides config file
   -r, --replace-images  Replace operand images instead of merging
   -v, --values-file VALUES_FILE
                         Helm values file to create or update
@@ -36,10 +36,10 @@ def parse_arguments():
 
   parser = argparse.ArgumentParser(description='Extract images from an MCE image manifest and update MCE Helm chart values')
   manifest_arg = parser.add_mutually_exclusive_group(required=True)
-  manifest_arg.add_argument('-f', '--file', help='MCE image manifest file')
-  manifest_arg.add_argument('-u', '--url', help='MCE image manifest URL')
+  manifest_arg.add_argument('-f', '--file', help='Path to MCE image manifest JSON file')
+  manifest_arg.add_argument('-u', '--url', help='URL to MCE image manifest JSON')
   parser.add_argument('-m', '--mce-version', default='2.10.0', help='MCE operator version')
-  parser.add_argument('-o', '--overrides', help='Overrides config file')
+  parser.add_argument('-o', '--overrides', help='Path to overrides config file')
   parser.add_argument('-r', '--replace-images', default=False, action='store_true', help='Replace operand images instead of merging')
   parser.add_argument('-v', '--values-file', required=True, help='Helm values file to create or update')
 
@@ -60,7 +60,12 @@ def read_json_file(file):
     sys.exit(1)
 
   with open(file, 'r') as json_file:
-    json_data = json.load(json_file)
+    try:
+      json_data = json.load(json_file)
+    except json.JSONDecodeError as e:
+      print(f"Could not decode JSON: {e}")
+      sys.exit(1)
+
     json_file.close()
 
   return json_data
@@ -82,7 +87,11 @@ def read_json_url(url):
     print(f"Could not download file: {e}")
     sys.exit(1)
 
-  json_data = json.loads(response.text)
+  try:
+    json_data = json.loads(response.text)
+  except json.JSONDecodeError as e:
+    print(f"Could not decode JSON: {e}")
+    sys.exit(1)
 
   return json_data
 
@@ -101,7 +110,12 @@ def read_yaml_file(file):
     sys.exit(1)
 
   with open(file, 'r') as yaml_file:
-    yaml_data = yaml.safe_load(yaml_file)
+    try:
+      yaml_data = yaml.safe_load(yaml_file)
+    except yaml.YAMLError as e:
+      print(f"Could not decode YAML: {e}")
+      sys.exit(1)
+
     yaml_file.close()
 
   return yaml_data
@@ -197,10 +211,11 @@ def main():
   else:
     manifest = read_json_url(args['url'])
 
-  if not os.path.exists(args['values_file']):
-    write_yaml_file(args['values_file'], default_values)
+  if os.path.exists(args['values_file']):
+    values = read_yaml_file(args['values_file'])
+  else:
+    values = default_values
 
-  values = read_yaml_file(args['values_file'])
   updated_values = merge_manifest_into_values(manifest, values, overrides, args['replace_images'], args['mce_version'])
   write_yaml_file(args['values_file'], updated_values)
 
