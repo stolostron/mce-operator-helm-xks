@@ -20,12 +20,12 @@ monitoring: true
 operand_images:
   addon_manager: quay.io/stolostron/addon-manager@sha256:a58706d6780158a11953fd8afd2975170dad48a25f4cfd2b4c929735e0d974a0
   apiserver_network_proxy: quay.io/stolostron/apiserver-network-proxy@sha256:dc74c7c67ca851f50b83d7a03f91d028214fd8a941f12edd4411b860dc7b763d
-  assisted_image_service: quay.io/stolostron/assisted-image-service@sha256:6dc6d3bb56038f3ad88d4f02c6dab63ad48cca79b4c7a09833a8bee05f9bb51c
-  assisted_installer: quay.io/stolostron/assisted-installer@sha256:28f08d789f6799e15819007a93ccb41bb2e2972e7d4ceb633252ace228595a8d
-  assisted_installer_agent: quay.io/stolostron/assisted-installer-agent@sha256:065f00a8b3b96072fbcfd0102666d2db63e2ab6ff69c47a1563a640ae7e5cc5a
-  assisted_installer_controller: quay.io/stolostron/assisted-installer-controller@sha256:d34a5ea7015a7c29507899576b6f2076d88792a562f1509f494ce9beeee9dc28
-  assisted_service_8: quay.io/stolostron/assisted-service-el8@sha256:172da218aadeee8e8847735cd4aead06396e234af3d4240ecde1e9658090bfc2
-  assisted_service_9: quay.io/stolostron/assisted-service@sha256:b20dc32130b70f86eb31c429392934f1a8ad73b6c7a9b07080288f6dc5a69317
+  assisted_image_service: "quay.io/stolostron/assisted-image-service@sha256:b58891c3de0a63e5b53238a78f71c2461256a9bff73971e0e9553bddb8c71853"
+  assisted_installer_agent: "quay.io/stolostron/assisted-installer-agent@sha256:a9b31ab5e41986ecf464613d285e9bd7c5518b94e238f6da5c8d8fabd03742a6"
+  assisted_installer_controller: "quay.io/stolostron/assisted-installer-controller@sha256:b8cbd23e4615d6dc60d4701d947c9bd154bb57abd046f9c528bfad28c815fca5"
+  assisted_installer: "quay.io/stolostron/assisted-installer@sha256:ad8626590a8178611aca379f9396f3606bf16a91780d103938c1606a6bf81f71"
+  assisted_service_8: "quay.io/stolostron/assisted-service-el8@sha256:8a817c1d79fa6afd88c82ad0c7ef82501dc8080cbca85452e405a38913d7628d"
+  assisted_service_9: "quay.io/stolostron/assisted-service@sha256:c45eea08d53967de089567dac526ad694f424b50bee4ceb107a306953c050a55"
   aws_encryption_provider: quay.io/stolostron/aws-encryption-provider@sha256:83f11e28004fcbb31d7ec6c34ef2d2ec7dd8fc175c5e0135f6ace9894c65bfd0
   backplane_must_gather: quay.io/stolostron/backplane-must-gather@sha256:50950dc11eff19e302fab90360985e72f10c1705002843c96cae0bc902adc91d
   backplane_operator: quay.io/rh_ee_rpiccoli/backplane-operator:cert-fix
