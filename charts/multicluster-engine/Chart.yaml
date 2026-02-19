@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: 2.10.0
+appVersion: 2.11.0
 description: multicluster-engine operator chart for non-OpenShift Kubernetes platforms
 keywords:
 - mce
@@ -7,6 +7,6 @@ keywords:
 - multiclusterengine
 name: multicluster-engine
 sources:
-- quay.io/stolostron/cmb-operator-bundle:2.10.0-BACKPLANE-2025-11-13-15-45-51
+- quay.io/stolostron/cmb-operator-bundle:2.11.0-BACKPLANE-2026-02-19-08-31-51
 type: application
-version: 2.10.0
+version: 2.11.0
