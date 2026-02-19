@@ -7,6 +7,6 @@ keywords:
 - multiclusterengine
 name: multicluster-engine
 sources:
-- quay.io/stolostron/cmb-operator-bundle:2.11.0-BACKPLANE-2026-02-02-18-37-27
+- quay.io/stolostron/cmb-operator-bundle:2.11.0-BACKPLANE-2026-02-19-08-31-51
 type: application
 version: 2.11.0
