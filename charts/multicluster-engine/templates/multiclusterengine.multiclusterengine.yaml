@@ -11,7 +11,7 @@ spec:
   imagePullSecret: open-cluster-management-image-pull-credentials
   overrides:
     components:
-    {{- range $key, $val := .Values.components }}
+    {{- range $key, $val := $.Values.components }}
     - enabled: {{ $val }}
       name: {{ $key | replace "_" "-" }}
     {{- end }}

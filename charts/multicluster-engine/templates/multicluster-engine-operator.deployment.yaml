@@ -65,6 +65,18 @@ spec:
           value: {{ .Values.operator_version }}
         - name: OPERATOR_PACKAGE
           value: multicluster-engine
+        {{- if .Values.proxies.http_proxy }}
+        - name: HTTP_PROXY
+          value: '{{ .Values.proxies.http_proxy }}'
+        {{- end }}
+        {{- if .Values.proxies.https_proxy }}
+        - name: HTTPS_PROXY
+          value: '{{ .Values.proxies.https_proxy }}'
+        {{- end }}
+        {{- if .Values.proxies.no_proxy }}
+        - name: NO_PROXY
+          value: '{{ .Values.proxies.no_proxy }}'
+        {{- end }}
         image: '{{ .Values.operator_image }}'
         livenessProbe:
           httpGet:
