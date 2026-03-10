@@ -16,6 +16,10 @@ components:
   managedserviceaccount: false
   server_foundation: false
 external_components: []
+proxies:
+  http_proxy: ""
+  https_proxy: ""
+  no_proxy: ""
 monitoring: true
 operand_images:
   addon_manager: "quay.io/stolostron/addon-manager@sha256:caf5ffd4eca56c5741e638f800964d3da4ff4dd9fd01ac991a78462e6a010220"
