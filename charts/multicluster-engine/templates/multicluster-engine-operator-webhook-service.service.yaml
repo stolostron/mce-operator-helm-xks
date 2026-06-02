@@ -4,6 +4,10 @@ metadata:
   creationTimestamp: null
   name: multicluster-engine-operator-webhook-service
   namespace: '{{ .Release.Namespace }}'
+  {{- if include "multicluster-engine.utils.isOCP" . }}
+  annotations:
+    service.beta.openshift.io/serving-cert-secret-name: multicluster-engine-operator-webhook
+  {{- end }}
 spec:
   ports:
   - port: 443

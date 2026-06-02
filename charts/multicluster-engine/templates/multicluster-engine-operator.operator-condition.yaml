@@ -1,0 +1,11 @@
+{{- if include "multicluster-engine.utils.isOCP" . }}
+apiVersion: operators.coreos.com/v2
+kind: OperatorCondition
+metadata:
+  name: {{ printf "multicluster-engine.v%s" .Values.operator_version }}
+spec:
+  deployments:
+  - multicluster-engine-operator
+  serviceAccounts:
+  - multicluster-engine-operator
+{{- end }}
