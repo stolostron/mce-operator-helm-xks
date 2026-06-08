@@ -77,6 +77,10 @@ spec:
         - name: NO_PROXY
           value: '{{ .Values.proxies.no_proxy }}'
         {{- end }}
+        {{- if include "multicluster-engine.utils.isOCP" . }}
+        - name: OPERATOR_CONDITION_NAME
+          value: {{ printf "multicluster-engine.v%s" .Values.operator_version | quote }}
+        {{- end }}
         image: '{{ .Values.operator_image }}'
         livenessProbe:
           httpGet:
