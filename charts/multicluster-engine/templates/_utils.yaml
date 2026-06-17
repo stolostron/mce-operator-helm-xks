@@ -1,0 +1,7 @@
+{{/*
+Detect if the chart is being deployed on OKD/OCP by checking for the
+openshift-config namespace. Returns "true" if running on OpenShift.
+*/}}
+{{- define "multicluster-engine.utils.isOCP" -}}
+{{- if (lookup "v1" "Namespace" "" "openshift-config") -}}true{{- end -}}
+{{- end -}}
