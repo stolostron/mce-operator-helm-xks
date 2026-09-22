@@ -28,7 +28,7 @@ operand_images:
   assisted_service_9: quay.io/stolostron/assisted-service@sha256:4aeb2529d781e3805d3b7946d4b42c5f8ef0ef1e54d722fe0556f7d407694cfa
   aws_encryption_provider: quay.io/stolostron/aws-encryption-provider@sha256:83f11e28004fcbb31d7ec6c34ef2d2ec7dd8fc175c5e0135f6ace9894c65bfd0
   backplane_must_gather: quay.io/stolostron/backplane-must-gather@sha256:080272c1fe5abbba4be740b357be350f8630fcac1d086df60e40a6572c748516
-  backplane_operator: quay.io/stolostron/backplane-operator@sha256:45242229e2188c08b459841aa6cdbf26affb9a681f94bddf529a2add84fad652
+  backplane_operator: quay.io/stolostron/backplane-operator@sha256:420b0bcce257c74235e9ea9cd04eb6ef3948eed730615518922fc4c8a17c1cc6
   backplane_operator_test: quay.io/stolostron/backplane-operator-test@sha256:f9a3b9e7b26791a2c16526dd18d1a40747e887f49d469d4971956bd7d97151f0
   cluster_api: quay.io/stolostron/cluster-api@sha256:7a04ac4e5bdaf29498af75b2b7c4ff19cb6223f2076c9373a3a955553243ddda
   cluster_api_provider_agent: quay.io/stolostron/cluster-api-provider-agent@sha256:c46864896f471f92b62093d19142676fd1ca67f2c22c62d4231e29d7b3e4ba26
