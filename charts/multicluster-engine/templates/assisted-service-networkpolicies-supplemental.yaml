@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: open-cluster-management:assisted-service:networkpolicies-supplemental
+rules:
+- apiGroups: ["networking.k8s.io"]
+  resources: ["networkpolicies"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+- apiGroups: ["config.openshift.io"]
+  resources: ["apiservers"]
+  verbs: ["get"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: open-cluster-management:assisted-service:networkpolicies-supplemental
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: open-cluster-management:assisted-service:networkpolicies-supplemental
+subjects:
+- kind: ServiceAccount
+  name: assisted-service
+  namespace: '{{ .Release.Namespace }}'
