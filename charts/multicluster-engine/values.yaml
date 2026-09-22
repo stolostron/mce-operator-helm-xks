@@ -73,7 +73,7 @@ operand_images:
   registration: quay.io/stolostron/registration@sha256:1167208d933f789f48a482b0d76c72c711519ac972482cb4e0f37f47eb3350a7
   registration_operator: quay.io/stolostron/registration-operator@sha256:cc096d3d845c72e1e125980c7b09743070b6ac0208ec16e23746feb0431abd4d
   work: quay.io/stolostron/work@sha256:d8d66c9eddee3f9028c4e17c43882627d69685b5bb3fd309f63cd8349660d7b7
-operator_image: quay.io/stolostron/backplane-operator@sha256:45242229e2188c08b459841aa6cdbf26affb9a681f94bddf529a2add84fad652
+operator_image: quay.io/stolostron/backplane-operator@sha256:420b0bcce257c74235e9ea9cd04eb6ef3948eed730615518922fc4c8a17c1cc6
 operator_version: 5.1.0
 proxies:
   http_proxy: ''
