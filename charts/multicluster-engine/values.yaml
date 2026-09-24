@@ -69,6 +69,7 @@ operand_images:
   postgresql_12: quay.io/stolostron/postgresql-12-centos7@sha256:94727d70e0afbf4e167e078744f3a10ac9d82edc553d57b0ecbb5443264f07e1
   postgresql_13: quay.io/stolostron/postgresql-13@sha256:f8c4c4364ab8d27d2c774cbd02a0d02b9d6e3cb6e8d69af728cdd889df312b56
   postgresql_15: quay.io/stolostron/postgresql-15@sha256:48516a92a36ffd318d562cca2d38b62980bd976c339c4448f5ac333cbf1e5f63
+  postgresql_16: quay.io/stolostron/postgresql-16@sha256:db2f73275f9cc0f2d262fadb8e8a5da72b089f9d22f7c859bb1364d9f9a8b622
   provider_credential_controller: quay.io/stolostron/provider-credential-controller@sha256:6f42d00f7c04721787c4be5ad57da2db0479a6259905e7bd1881a7fc658b121a
   registration: quay.io/stolostron/registration@sha256:1167208d933f789f48a482b0d76c72c711519ac972482cb4e0f37f47eb3350a7
   registration_operator: quay.io/stolostron/registration-operator@sha256:cc096d3d845c72e1e125980c7b09743070b6ac0208ec16e23746feb0431abd4d

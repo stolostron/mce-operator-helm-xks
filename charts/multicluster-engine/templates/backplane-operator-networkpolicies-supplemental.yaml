@@ -1,0 +1,21 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: multicluster-engine-operator-networkpolicies-supplemental
+rules:
+- apiGroups: ["networking.k8s.io"]
+  resources: ["networkpolicies"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: multicluster-engine-operator-networkpolicies-supplemental
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: multicluster-engine-operator-networkpolicies-supplemental
+subjects:
+- kind: ServiceAccount
+  name: multicluster-engine-operator
+  namespace: multicluster-engine
